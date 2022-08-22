@@ -8,7 +8,7 @@ import { Schema, model, models } from "mongoose"
  * 
  */
 
-const productsSchema = new Schema({
+const ProductsSchema = new Schema({
   name: {
     type: String,
     unique: true,
@@ -57,4 +57,4 @@ const productsSchema = new Schema({
  * se comprueba si la DB ya tiene un esquema de lo contrario se crea
  */
 
-export default models.Products || model("Products", productsSchema)
+export default models.Products || model("Products", ProductsSchema)

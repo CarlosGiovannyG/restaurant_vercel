@@ -1,5 +1,5 @@
 //~ FUNCIÓN PARA MAPEAR Y LISTAR ERRORES 
-import { ErrorHandler } from '../utils/errorHandler.js'
+import ErrorHandler from "../utils/errorHandler"
 
 export default (err, req, res, next) => {
   err.statosCode = err.statosCode || 500

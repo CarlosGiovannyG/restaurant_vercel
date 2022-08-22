@@ -3,7 +3,7 @@
 recibe el mensaje que se enviara al usuario, y un satus de codigo esta clase se usa de forma global
 */
 
-export class ErrorHandler extends Error {
+export default class ErrorHandler extends Error {
   constructor(message, statusCode) {
     super(message)
     this.statusCode = statusCode

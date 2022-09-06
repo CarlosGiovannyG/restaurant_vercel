@@ -4,7 +4,7 @@ import { Schema, model, models } from "mongoose"
 //^ CREACIÓN DEL ESQUEMA PARA LOS PRODUCTOS QUE ESTAN EN LA PÁGINA
 
 /**
- * se crea el esquema de productos señalando cuales campos son onligatrios y cuales no
+ * ! se crea el esquema de productos señalando cuales campos son onligatrios y cuales no
  * 
  */
 
@@ -54,7 +54,7 @@ const ProductsSchema = new Schema({
 });
 
 /**
- * se comprueba si la DB ya tiene un esquema de lo contrario se crea
+ * ! se comprueba si la DB ya tiene un esquema de lo contrario se crea
  */
 
 export default models.Products || model("Products", ProductsSchema)

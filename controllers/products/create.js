@@ -15,7 +15,7 @@ cloudinary.config({
 //& CREACIÓN DE PRODUCTOS 
 export const createProduct = catchAsyncErrors(async (req, res, next) => {
 
-  console.log('Imagen', req.body);
+  console.log('Imagen', req.file);
 
   // const ext = path.extname(req.file.originalname).toLocaleLowerCase()
 
@@ -31,19 +31,19 @@ export const createProduct = catchAsyncErrors(async (req, res, next) => {
     //   crop: 'scale'
     // })
 
-    const newProducto = new products({
-      name: req.body.name,
-      description: req.body.description,
-      category: req.body.category,
-      price: req.body.price,
-      // image: restimagen.url,
-      // public_id: restimagen.public_id,
-      id_autor: req.body.autor,
-    })
+    // const newProducto = new products({
+    //   name: req.body.name,
+    //   description: req.body.description,
+    //   category: req.body.category,
+    //   price: req.body.price,
+    //   // image: restimagen.url,
+    //   // public_id: restimagen.public_id,
+    //   id_autor: req.body.autor,
+    // })
 
-    await newProducto.save();
+    // await newProducto.save();
 
-    res.status(201).send({ message: 'Producto creado con exito' })
+     res.status(201).send({ message: 'Producto creado con exito' })
 
   } catch (error) {
     res.status(500).send({ message: 'Ocurrio un error inesperado', error })
